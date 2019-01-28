@@ -2,3 +2,7 @@ Eclipse/WIFIServer/.settings
 language.settings.xml
 Eclipse/freeRTOS/.settings
 Eclipse/WIFIClient/.settings
+*.un~
+*.cpp~
+*.clang_complete~
+*.json~

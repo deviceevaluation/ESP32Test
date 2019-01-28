@@ -6,7 +6,6 @@
  */
 #include <Arduino.h>
 #include "WiFi.h"
-#include "BLE2902.h"
 bool status = true;
 
 const int SERVER_PORT = 80;
@@ -19,18 +18,8 @@ const char URL[] = "/cgi-bin/time";
 
 String createGETMeathod(const char* host, const char* url);
 
-class ABCDEFG{
-  public:
-    void abcd();
-    void cdef();
-    void aaaaa();
-};
-
-
 void setup()
 {
-  ABCDEFG abcdefg;
-
 	Serial.begin(115200);
 
 	Serial.println("WiFi Client Test");

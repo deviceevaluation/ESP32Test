@@ -10,19 +10,23 @@
 
 void taskFunc(void* arg);
 
-
 TaskHandle_t hTask1;
 TaskHandle_t hTask2;
 
 void setup()
 {
 	Serial.begin(115200);
+
+	pinMode(1,OUTPUT_OPEN_DRAIN);
+
+
 	xTaskCreatePinnedToCore(taskFunc, "Task1", 4096, NULL, 10, &hTask1, 0);
 	xTaskCreatePinnedToCore(taskFunc, "Task2", 4096, NULL, 20, &hTask2, 1);
 
 }
 void loop()
 {
+
 }
 
 void taskFunc(void* arg)
